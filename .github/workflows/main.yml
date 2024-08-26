@@ -1,8 +1,8 @@
 name: linting, testing, building
-on: 
+on:
   push:
     branches: [master]
-  pull-request: 
+  pull_request:
   branches: [master]
 jobs:
   pipeline:
@@ -27,6 +27,3 @@ jobs:
         run: npm run lint:scss
       - name: unit testing
         run: npm run test:unit
-
-
-
