@@ -9,5 +9,7 @@
   "Выбросить ошибку": "Throw error",
   "Переключить": "Switch",
   "Короткий язык": "En",
-  "Войти": "Login"
+  "Войти": "Login",
+  "Введите username": "Enter username",
+  "Введите password": "Enter username"
 }
