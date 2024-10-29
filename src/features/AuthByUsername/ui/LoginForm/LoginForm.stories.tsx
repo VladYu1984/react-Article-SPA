@@ -1,5 +1,6 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { PreloadedState } from '@reduxjs/toolkit';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import LoginForm from './LoginForm';
 
