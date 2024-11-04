@@ -78,6 +78,7 @@ export const Input = memo((props: InputProps) => {
                     onBlur={onBlur}
                     onSelect={onSelect}
                     readOnly={readonly}
+                    // eslint-disable-next-line react/jsx-props-no-spreading
                     {...otherProps}
                 />
                 {isCarretVisible && (
