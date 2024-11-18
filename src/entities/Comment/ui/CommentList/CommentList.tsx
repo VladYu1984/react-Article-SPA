@@ -7,18 +7,28 @@ import cls from './CommentList.module.scss';
 
 interface CommentListProps {
   className?: string;
-  commnets?: Comment[];
+  comments?: Comment[];
   isLoading?: boolean;
 }
 
 export const CommentList = (props: CommentListProps) => {
-    const { commnets, className, isLoading } = props;
+    const { comments, className, isLoading } = props;
     const { t } = useTranslation();
+
+    if (isLoading) {
+        return (
+            <div className={classNames(cls.CommentCard, {}, [className])}>
+                <CommentCard isLoading />
+                <CommentCard isLoading />
+                <CommentCard isLoading />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.CommentList, {}, [className])}>
-            {commnets?.length
-                ? commnets.map((comment) => (
+            {comments?.length
+                ? comments.map((comment) => (
                     <CommentCard isLoading={isLoading} className={cls.comment} comment={comment} />
                 ))
                 : <Text text={t('Комментарии отсутствуют')} />}
