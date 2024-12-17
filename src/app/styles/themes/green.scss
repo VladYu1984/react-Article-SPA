@@ -1,15 +1,18 @@
 .app_green_theme {
-    --bg-color: #b0f2f9;
-    --inverted-bg-color: #0d7377;
-    --primary-color: #f8a72d;
-    --secondary-color: #3aa168;
-    --inverted-primary-color: #79f27d;
-    --inverted-secondary-color: #cac0d2;
+  --bg-color: #b0f2f9;
+  --inverted-bg-color: #0d7377;
+  --primary-color: #f8a72d;
+  --secondary-color: #3aa168;
+  --inverted-primary-color: #79f27d;
+  --inverted-secondary-color: #cac0d2;
 
-    // Skeleton
-    --skeleton-color: #79f2c6;
-    --skeleton-shadow: #2be886;
+  // Skeleton
+  --skeleton-color: #79f2c6;
+  --skeleton-shadow: #2be886;
 
-    // Code
-    --code-bg: #02f940;
+  // Code
+  --code-bg: #02f940;
+
+  // Card
+  --card-bg: #6ccad5;
 }
