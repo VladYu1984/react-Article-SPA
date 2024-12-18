@@ -42,7 +42,7 @@ module.exports = {
       "error",
       {
         markupOnly: true,
-        ignoreAttribute: ["data-testid", "to"],
+        ignoreAttribute: ["data-testid", "to", "target"],
       },
     ],
     "max-len": ["error", { ignoreComments: true, code: 140 }],
@@ -53,6 +53,7 @@ module.exports = {
     "no-param-reassign": "off",
     "no-undef": "off",
     "react/no-array-index-key": "off",
+    "arrow-body-style": "off",
   },
   globals: {
     __IS_DEV__: true,

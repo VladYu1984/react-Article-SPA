@@ -10,9 +10,12 @@ import {
 import { CombinedState } from "redux";
 import { ProfileSchema } from "entities/Profile";
 import { AxiosInstance } from "axios";
-import { NavigateOptions, To } from "react-router";
 import { ArticleDetailsSchema } from "entities/Article";
-import { ArticleDetailsComentsSchema } from "pages/ArticleDetailsPage";
+import {
+  ArticleDetailsComentsSchema,
+  ArticleDetailsPageSchema,
+  ArticleDetailsRecommendationsSchema,
+} from "pages/ArticleDetailsPage";
 import { AddCommentFormSchema } from "features/AddCommentForm";
 import { articlesPageSchema } from "pages/ArticlesPage/model/types/articlesPageSchema";
 import { UISchema } from "features/UI";
@@ -26,7 +29,7 @@ export interface StateSchema {
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsComentsSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema;
   addCommentForm?: AddCommentFormSchema;
   articlesPage?: articlesPageSchema;
 }
