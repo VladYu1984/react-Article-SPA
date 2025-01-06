@@ -31,5 +31,20 @@
   "Введите текст комментария": "Enter comment text",
   "Отправить": "Send",
   "Читать далее...": "Read more...",
-  "Назад к статьям": "Back to articles"
+  "Назад к статьям": "Back to articles",
+  "возрастанию": "ascending",
+  "по": "in",
+  "убыванию": "descending",
+  "Айти": "IT",
+  "Экономика": "Economics",
+  "Все статьи": "All articles",
+  "Наука": "Science",
+  "Сортировать ПО": "Sort BY",
+  "дате создания": "created date",
+  "названию": "name",
+  "просмотрам": "views",
+  "Создание новой статьи": "Create new article",
+  "Редактирование статьи с ID = ": "Edit article with ID = ",
+  "MY APP": "MY APP",
+  "Создать статью": "Create article"
 }
