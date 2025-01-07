@@ -16,7 +16,7 @@ import {
   profileReducer,
   ValidateProfileError,
 } from "entities/Profile";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
 import { Currency } from "entities/Currency";
@@ -73,16 +73,16 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     [dispatch]
   );
 
-  const onChangeAge = useCallback(
+  const onChangeCity = useCallback(
     (value?: string) => {
-      dispatch(profileActions.updateProfile({ age: Number(value || 0) }));
+      dispatch(profileActions.updateProfile({ city: value || "" }));
     },
     [dispatch]
   );
 
-  const onChangeCity = useCallback(
+  const onChangeAge = useCallback(
     (value?: string) => {
-      dispatch(profileActions.updateProfile({ city: value || "" }));
+      dispatch(profileActions.updateProfile({ age: Number(value || 0) }));
     },
     [dispatch]
   );
@@ -116,7 +116,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   );
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames("", {}, [className])}>
         <ProfilePageHeader />
         {validateErrors?.length &&
@@ -131,6 +131,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           data={formData}
           isLoading={isLoading}
           error={error}
+          readonly={readonly}
           onChangeFirstname={onChangeFirstname}
           onChangeLastname={onChangeLastname}
           onChangeAge={onChangeAge}
@@ -139,7 +140,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           onChangeAvatar={onChangeAvatar}
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
-          readonly={readonly}
         />
       </Page>
     </DynamicModuleLoader>
