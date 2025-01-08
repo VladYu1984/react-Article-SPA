@@ -9,6 +9,7 @@ const initialState: ProfileSchema = {
     error: undefined,
     data: undefined,
 };
+//rename to profileSlice
 
 export const profileSlice = createSlice({
     name: 'profile',
