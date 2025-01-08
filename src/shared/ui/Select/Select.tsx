@@ -1,6 +1,6 @@
-import { ChangeEvent, useMemo } from "react";
-import { classNames, Mods } from "shared/lib/classNames/classNames";
-import cls from "./Select.module.scss";
+import { ChangeEvent, useMemo } from 'react';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import cls from './Select.module.scss';
 
 export interface SelectOption<T extends string> {
   value: T;
@@ -17,35 +17,36 @@ interface SelectProps<T extends string> {
 }
 
 export const Select = <T extends string>(props: SelectProps<T>) => {
-  const { className, label, options, value, onChange, readonly } = props;
+    const {
+        className, label, options, value, onChange, readonly,
+    } = props;
 
-  const mods: Mods = {};
+    const mods: Mods = {};
 
-  const onChangeHadler = (e: ChangeEvent<HTMLSelectElement>) => {
-    onChange?.(e.target.value as T);
-  };
+    const onChangeHadler = (e: ChangeEvent<HTMLSelectElement>) => {
+        onChange?.(e.target.value as T);
+    };
 
-  const optionsList = useMemo(
-    () =>
-      options?.map((opt) => (
-        <option className={cls.option} value={opt.value} key={opt.value}>
-          {opt.content}
-        </option>
-      )),
-    [options]
-  );
+    const optionsList = useMemo(
+        () => options?.map((opt) => (
+            <option className={cls.option} value={opt.value} key={opt.value}>
+                {opt.content}
+            </option>
+        )),
+        [options],
+    );
 
-  return (
-    <div className={classNames(cls.Wrapper, mods, [className])}>
-      {label && <span className={cls.label}>{`${label}>`}</span>}
-      <select
-        disabled={readonly}
-        className={cls.select}
-        value={value}
-        onChange={onChangeHadler}
-      >
-        {optionsList}
-      </select>
-    </div>
-  );
+    return (
+        <div className={classNames(cls.Wrapper, mods, [className])}>
+            {label && <span className={cls.label}>{`${label}>`}</span>}
+            <select
+                disabled={readonly}
+                className={cls.select}
+                value={value}
+                onChange={onChangeHadler}
+            >
+                {optionsList}
+            </select>
+        </div>
+    );
 };

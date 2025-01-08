@@ -1,15 +1,15 @@
-import { User } from "entities/User";
+import { User } from 'entities/User';
 
 export enum ArticleBlockType {
-  CODE = "CODE",
-  IMAGE = "IMAGE",
-  TEXT = "TEXT",
+  CODE = 'CODE',
+  IMAGE = 'IMAGE',
+  TEXT = 'TEXT',
 }
 
 export enum ArticleSortField {
-  VIEWS = "views",
-  TITLE = "title",
-  CREATED = "createAt",
+  VIEWS = 'views',
+  TITLE = 'title',
+  CREATED = 'createAt',
 }
 
 export interface ArticleBlockBase {
@@ -38,15 +38,15 @@ export type ArticleBlock =
   | ArticleImageBlock;
 
 export enum ArticleType {
-  ALL = "ALL",
-  IT = "IT",
-  SCIENCE = "SCIENCE",
-  ECONOMICS = "ECONOMICS",
+  ALL = 'ALL',
+  IT = 'IT',
+  SCIENCE = 'SCIENCE',
+  ECONOMICS = 'ECONOMICS',
 }
 
 export enum ArticleView {
-  BIG = "BIG",
-  SMALL = "SMALL",
+  BIG = 'BIG',
+  SMALL = 'SMALL',
 }
 
 export interface Article {
