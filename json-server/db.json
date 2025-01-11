@@ -605,6 +605,13 @@
       "password": "123",
       "role": "USER",
       "avatar": "https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
+    },
+    {
+      "id": "3",
+      "username": "vlad",
+      "password": "111",
+      "role": "ADMIN",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/1468/1468166.png"
     }
   ],
   "profile": [
@@ -629,6 +636,17 @@
       "city": "Tbilisi",
       "username": "username 2",
       "avatar": "https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
+    },
+    {
+      "id": "3",
+      "first": "Vladislav",
+      "lastname": "Yu",
+      "age": 27777,
+      "currency": "USD",
+      "country": "Ukraine",
+      "city": "Thailand",
+      "username": "vladYu444",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/1468/1468166.png"
     }
   ]
 }

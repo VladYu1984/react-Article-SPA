@@ -55,6 +55,10 @@ export const Navbar = ({ className }: NavbarProps) => {
                             href: RoutePath.profile + authData.id,
                         },
                         {
+                            content: t('Создать статью'),
+                            href: RoutePath.article_create,
+                        },
+                        {
                             content: t('Выйти'),
                             onClick: onLogout,
                         },
