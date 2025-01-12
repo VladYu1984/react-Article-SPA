@@ -33,7 +33,7 @@ export const ArticleDetailsPageHeader = (
     }, [navigate, article?.id]);
 
     return (
-        <HStack justify='between' max className={classNames('', {}, [className])}>
+        <HStack justify="between" max className={classNames('', {}, [className])}>
             <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                 {t('Назад к статьям')}
             </Button>
